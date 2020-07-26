@@ -15,7 +15,7 @@ public class WayPointScript : MonoBehaviour
         target = waypoint[currentWayPoint].position;
 		moveDirection = target - transform.position;
 
-		if(moveDirection.magnitude < 3) {
+		if(moveDirection.magnitude < 5) {
 			currentWayPoint = ++currentWayPoint % waypoint.Length;
 		}
 
