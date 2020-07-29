@@ -29,18 +29,25 @@ public class BulletScript : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "enemy" || other.gameObject.tag == "cow") {
-            PlayerScoreScript.playerFood += 1;
-        }
+        if (other.gameObject.tag == "enemy" || other.gameObject.tag == "cow" || other.gameObject.tag == "figurine")
+        {
+            if (other.gameObject.tag == "enemy" || other.gameObject.tag == "cow")
+            {
+                PlayerScoreScript.playerFood += 1;
+            }
 
-        if (other.gameObject.tag == "figurine") {
-            PlayerScoreScript.playerScore += 1;
-        }
-        //----///
-        if (other.gameObject.tag == "cow") {
+            if (other.gameObject.tag == "figurine")
+            {
+                PlayerScoreScript.playerScore += 1;
+            }
+            //----///
+            if (other.gameObject.tag == "cow")
+            {
+                Destroy(other.gameObject);
+                Instantiate(cow2, other.transform.position, Quaternion.identity);
+            }
+            other.GetComponent<AudioSource>().Play();
             Destroy(other.gameObject);
-            Instantiate(cow2, other.transform.position, Quaternion.identity);
         }
-        Destroy(other.gameObject);
     }
 }
