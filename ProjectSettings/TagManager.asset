@@ -8,6 +8,10 @@ TagManager:
   - enemy
   - figurine
   - cow
+  - Person
+  - Doors
+  - wall
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -17,11 +21,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - layer8
+  - layer9
+  - layer10
+  - layer11
+  - layer12
   - 
   - 
   - 

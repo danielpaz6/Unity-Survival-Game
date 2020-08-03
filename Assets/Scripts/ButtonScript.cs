@@ -12,15 +12,11 @@ public class ButtonScript : MonoBehaviour
 	public void StartLevel()
 	{
 		// The main menu scene is 0
-		Debug.Log("start1");
 		SceneManager.LoadScene(1);
-		Debug.Log("start2");
 	}
 
 	public void ExitGame()
 	{
-		Debug.Log("exit1");
 		Application.Quit();
-		Debug.Log("exit2");
-	}
+     }
 }
