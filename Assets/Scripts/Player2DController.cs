@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MouseController : MonoBehaviour {
+public class Player2DController : MonoBehaviour {
 
 	public float jetpackForce = 75.0f;
 

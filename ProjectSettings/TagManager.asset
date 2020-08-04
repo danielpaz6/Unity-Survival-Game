@@ -26,7 +26,7 @@ TagManager:
   - layer10
   - layer11
   - layer12
-  - 
+  - Ground
   - 
   - 
   - 
@@ -48,4 +48,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 584548865
+    locked: 0
+  - name: Objects
+    uniqueID: 3534192221
+    locked: 0
+  - name: Player
+    uniqueID: 1070944017
+    locked: 0
+  - name: Decoration
+    uniqueID: 792976953
     locked: 0
