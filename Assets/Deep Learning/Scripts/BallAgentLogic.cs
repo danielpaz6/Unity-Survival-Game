@@ -19,24 +19,17 @@ public class BallAgentLogic : Agent
         // Reset agent
         this.rBody.angularVelocity = Vector3.zero;
         this.rBody.velocity = Vector3.zero;
-		Debug.Log("Reset transform");
+        this.transform.localPosition = new Vector3(-9, 0.5f, 0);
 
         // Move target to a new spot
-        //target.localPosition = new Vector3(12 + Random.value * 8, Random.value * 3, Random.value * 10 - 5);
-        //target.position = new Vector3(29.27f + Random.value * 2, 17.35f + Random.value * 2, 32f + Random.value * 2);
-
-		Vector3 realV = new Vector3(29.27f + Random.value * 2, 17.35f + Random.value * 2, 32f + Random.value * 2);
-		Vector3 realVBall = new Vector3(20.44f, 11.584f, 31.15f);
-		Vector3 fixedV = new Vector3(453.7077f, -0.9097576f, +220.1232f);
-		target.position = Vector3.zero + fixedV + realV;
-		this.transform.position = Vector3.zero + fixedV + realVBall;
+        target.localPosition = new Vector3(12 + Random.value * 8, Random.value * 3, Random.value * 10 - 5);
     }
 
     public override void CollectObservations(VectorSensor sensor)
     {
         // Target and Agent positions & Agent velocity
-        sensor.AddObservation(target.position);
-        sensor.AddObservation(this.transform.position);
+        sensor.AddObservation(target.localPosition);
+        sensor.AddObservation(this.transform.localPosition);
         sensor.AddObservation(rBody.velocity);
     }
 
@@ -57,13 +50,12 @@ public class BallAgentLogic : Agent
         }
 
         // Prevent adding forces after jumping
-        //if (this.transform.localPosition.x < 8.5)
-        if (this.transform.position.x < 25)
+        if (this.transform.localPosition.x < 8.5)
         {
             rBody.AddForce(controlSignal * speed);
         }
 
-        float distanceToTarget = Vector3.Distance(this.transform.position, target.position);
+        float distanceToTarget = Vector3.Distance(this.transform.localPosition, target.localPosition);
         // Reached target
         if (distanceToTarget < 1.42f)
         {
@@ -72,7 +64,7 @@ public class BallAgentLogic : Agent
         }
 
         // Fell of platform
-        if (this.transform.position.y < 0)
+        if (this.transform.localPosition.y < 0)
         {
             EndEpisode();
         }
@@ -80,8 +72,8 @@ public class BallAgentLogic : Agent
 
     public override void Heuristic(float[] actionsOut)
     {
-        actionsOut[0] = Input.GetAxis("Vertical");
-        actionsOut[1] = Input.GetAxis("Horizontal");
+        //actionsOut[0] = Input.GetAxis("Vertical");
+        //actionsOut[1] = Input.GetAxis("Horizontal");
     }
 
 }

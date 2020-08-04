@@ -12,10 +12,10 @@ public class RayCasterScript : MonoBehaviour
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward), Color.green);
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward) , out hit, 6))
         {
-            Debug.Log("Hit");
+            //Debug.Log("Hit");
 
             if (hit.collider.gameObject.name == "Guy" || hit.collider.gameObject.name == "Asi" || hit.collider.gameObject.name == "Isreal") {
-                Debug.Log("Hit1");
+                //Debug.Log("Hit1");
                 hit.collider.GetComponent<AudioSource>().Play();
             }
             //Destroy(GetComponent<Rigidbody>());
@@ -24,7 +24,7 @@ public class RayCasterScript : MonoBehaviour
 
             if (hit.collider.gameObject.tag == "Fire")
             {
-                Debug.Log("Hit2");
+                //Debug.Log("Hit2");
                 hit.collider.GetComponent<Renderer>().material.color = Color.yellow;
             }
         }
