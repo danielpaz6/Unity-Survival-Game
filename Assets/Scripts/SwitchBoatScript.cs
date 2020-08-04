@@ -2,36 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwitchScript : MonoBehaviour
+public class SwitchBoatScript : MonoBehaviour
 {
 	public GameObject boat;
 	public GameObject boatCamera;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 8f76439... Added Deep Learning feature
-
+	public GameObject person;
+	public Transform playerStartPosition;
 	
     // Start is called before the first frame update
     void Start()
     {
         
     }
-<<<<<<< HEAD
-=======
-	public GameObject person;
-	public GameObject playerStartPosition;
->>>>>>> 24cee3dd4bcb45e2f273efe73597708052959b55
-=======
->>>>>>> parent of 8f76439... Added Deep Learning feature
 
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
-=======
 		// out of boat
         if(Input.GetKey("1")) {
 			boat.GetComponent<Rigidbody>().isKinematic = false;
@@ -46,9 +32,6 @@ public class SwitchScript : MonoBehaviour
 			person.SetActive(true);
 			person.transform.position = playerStartPosition.transform.position;
 		}
->>>>>>> 24cee3dd4bcb45e2f273efe73597708052959b55
-=======
         
->>>>>>> parent of 8f76439... Added Deep Learning feature
     }
 }
