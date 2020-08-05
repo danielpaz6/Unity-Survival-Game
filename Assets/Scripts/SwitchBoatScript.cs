@@ -7,6 +7,7 @@ public class SwitchBoatScript : MonoBehaviour
 	public GameObject boat;
 	public GameObject boatCamera;
 	public GameObject person;
+<<<<<<< HEAD
 	public Transform playerStartPosition;
 	
     // Start is called before the first frame update
@@ -14,6 +15,9 @@ public class SwitchBoatScript : MonoBehaviour
     {
         
     }
+=======
+	public GameObject playerStartPosition;
+>>>>>>> e4b3659249b2609fac5e3ca8eb4273d8dee27a32
 
     // Update is called once per frame
     void Update()
@@ -32,6 +36,11 @@ public class SwitchBoatScript : MonoBehaviour
 			person.SetActive(true);
 			person.transform.position = playerStartPosition.transform.position;
 		}
+<<<<<<< HEAD
         
     }
 }
+=======
+    }
+}
+>>>>>>> e4b3659249b2609fac5e3ca8eb4273d8dee27a32
