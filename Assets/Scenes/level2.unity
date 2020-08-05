@@ -202,9 +202,8 @@ GameObject:
   - component: {fileID: 189401679}
   - component: {fileID: 189401678}
   - component: {fileID: 189401677}
-  - component: {fileID: 189401676}
-  - component: {fileID: 189401675}
   - component: {fileID: 189401674}
+  - component: {fileID: 189401675}
   m_Layer: 0
   m_Name: BallAgent
   m_TagString: Untagged
@@ -235,21 +234,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 189401673}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00eb0cebd53376141b85aa513f7c42dd, type: 3}
+  m_Script: {fileID: 11500000, guid: ef2d335f77b0128408dd219eee4812e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &189401676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 189401673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b94c46797a69c334db0e5a8ec29b521f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  target: {fileID: 2066667296}
+  speed: 20
 --- !u!114 &189401677
 MonoBehaviour:
   m_ObjectHideFlags: 0
