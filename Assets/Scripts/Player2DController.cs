@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Player2DController : MonoBehaviour {
 
@@ -66,6 +67,11 @@ public class Player2DController : MonoBehaviour {
 		AdjustFootstepsAndJetpackSound(jetpackActive);
 
 		parallax.offset = transform.position.x;
+
+		if (coins==6)
+		{
+			SceneManager.LoadScene(4);
+		}
 	} 
 
 	void UpdateGroundedStatus()
@@ -85,21 +91,21 @@ public class Player2DController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collider)
 	{
-		if (collider.gameObject.CompareTag("Coins"))
+		if (collider.gameObject.CompareTag("Food"))
 			CollectCoin(collider);
-		else
-			HitByLaser(collider);
+		//else
+		//	HitByLaser(collider);
 	}
 		
-	void HitByLaser(Collider2D laserCollider)
-	{
-		if (!dead)
-			laserCollider.gameObject.GetComponent<AudioSource>().Play();
+	//void HitByLaser(Collider2D laserCollider)
+	//{
+	//	//if (!dead)
+	//		//laserCollider.gameObject.GetComponent<AudioSource>().Play();
 
-		dead = true;
+	//	dead = true;
 
-		animator.SetBool("dead", true);
-	}
+	//	animator.SetBool("dead", true);
+	//}
 
 	void CollectCoin(Collider2D coinCollider)
 	{
@@ -107,7 +113,7 @@ public class Player2DController : MonoBehaviour {
 		
 		Destroy(coinCollider.gameObject);
 
-		AudioSource.PlayClipAtPoint(coinCollectSound, transform.position);
+		//AudioSource.PlayClipAtPoint(coinCollectSound, transform.position);
 	}
 
 	void OnGUI()

@@ -12,6 +12,7 @@ TagManager:
   - Doors
   - wall
   - Fire
+  - Food
   layers:
   - Default
   - TransparentFX
