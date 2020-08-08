@@ -22,6 +22,8 @@ public class GeneratorScript : MonoBehaviour {
 	public float objectsMinRotation = -45.0f;
 	public float objectsMaxRotation = 45.0f; 
 
+	int currentRoomCounter = 1;
+
 
 	// Use this for initialization
 	void Start () {
@@ -40,15 +42,16 @@ public class GeneratorScript : MonoBehaviour {
 		
 		GenerateRoomIfRequred();
 
-		GenerateObjectsIfRequired();    
+		//GenerateObjectsIfRequired();    
 	}
 
 
 	void AddRoom(float farhtestRoomEndX)
 	{
 		//1
-		int randomRoomIndex = Random.Range(0, availableRooms.Length);
-		
+		//int randomRoomIndex = Random.Range(0, availableRooms.Length);
+		int randomRoomIndex = currentRoomCounter++ % availableRooms.Length;
+
 		//2
 		GameObject room = (GameObject)Instantiate(availableRooms[randomRoomIndex]);
 		

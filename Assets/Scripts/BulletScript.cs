@@ -48,6 +48,7 @@ public class BulletScript : MonoBehaviour
             }
             other.GetComponent<AudioSource>().Play();
             Destroy(other.gameObject);
+			Debug.Log("Object Destroyed!");
         }
     }
 }
