@@ -22,7 +22,8 @@ public class BulletScript : MonoBehaviour
         //   if (transform.position.y > 15 || transform.position.x > 800) {
 
        long time2 = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
-        if (time2-time>3000) { 
+        if (time2-time>3000) {
+            Debug.Log("destroy1");
             Destroy(gameObject);
         }
     }
