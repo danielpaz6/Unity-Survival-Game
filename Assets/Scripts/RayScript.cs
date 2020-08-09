@@ -15,7 +15,7 @@ public class RayScript : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 100, layerMask)) {
-            hit.collider.GetComponent<Renderer>().material.color = Color.white;
+            hit.collider.GetComponent<Renderer>().material.color = Color.black;
         }
 
     }
