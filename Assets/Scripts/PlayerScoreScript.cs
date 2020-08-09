@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerScoreScript : MonoBehaviour
 {
-    public static int playerScore;
+    public static int playerScore; //
     public static int playerFood;
     public GameObject bullet;
 
