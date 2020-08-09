@@ -32,8 +32,8 @@ public class PlayerScoreScript : MonoBehaviour
         if (other.gameObject.tag == "figurine")
         {
             playerScore += 1;
+            Destroy(other.gameObject);
         }
-        Destroy(other.gameObject);
     }
 
     public void OnGUI()
