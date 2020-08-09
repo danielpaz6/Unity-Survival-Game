@@ -32,16 +32,8 @@ public class BulletScript : MonoBehaviour
     {
         if (other.gameObject.tag == "enemy" || other.gameObject.tag == "cow")
         {
-            if (other.gameObject.tag == "enemy" || other.gameObject.tag == "cow")
-            {
-                PlayerScoreScript.playerFood += 1;
-            }
+            PlayerScoreScript.playerFood += 1;
 
-            //if (other.gameObject.tag == "figurine")
-            //{
-            //    PlayerScoreScript.playerScore += 1;
-            //}
-            //----///
             if (other.gameObject.tag == "cow")
             {
                 Destroy(other.gameObject);
