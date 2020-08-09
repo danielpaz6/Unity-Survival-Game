@@ -66,7 +66,7 @@ public class Player2DController : MonoBehaviour {
 
 		AdjustFootstepsAndJetpackSound(jetpackActive);
 
-		parallax.offset = transform.position.x;
+		//parallax.offset = transform.position.x;
 
 		if (coins==6)
 		{
@@ -85,14 +85,18 @@ public class Player2DController : MonoBehaviour {
 
 	void AdjustJetpack (bool jetpackActive)
 	{
-		jetpack.enableEmission = !grounded;
-		jetpack.emissionRate = jetpackActive ? 300.0f : 75.0f; 
+		//jetpack.enableEmission = !grounded;
+		//jetpack.emissionRate = jetpackActive ? 300.0f : 75.0f; 
 	}
 
 	void OnTriggerEnter2D(Collider2D collider)
 	{
 		if (collider.gameObject.CompareTag("Food"))
 			CollectCoin(collider);
+
+		if (collider.gameObject.CompareTag("Lose Area"))
+			SceneManager.LoadScene(4);
+
 		//else
 		//	HitByLaser(collider);
 	}
@@ -151,10 +155,10 @@ public class Player2DController : MonoBehaviour {
 
 	void AdjustFootstepsAndJetpackSound(bool jetpackActive)    
 	{
-		footstepsAudio.enabled = !dead && grounded;
+		//footstepsAudio.enabled = !dead && grounded;
 		
-		jetpackAudio.enabled =  !dead && !grounded;
-		jetpackAudio.volume = jetpackActive ? 1.0f : 0.5f;        
+		//jetpackAudio.enabled =  !dead && !grounded;
+		//jetpackAudio.volume = jetpackActive ? 1.0f : 0.5f;        
 	}
 
 }

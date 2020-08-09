@@ -13,6 +13,7 @@ TagManager:
   - wall
   - Fire
   - Food
+  - Lose Area
   layers:
   - Default
   - TransparentFX
