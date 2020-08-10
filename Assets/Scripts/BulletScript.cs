@@ -33,15 +33,16 @@ public class BulletScript : MonoBehaviour
         if (other.gameObject.tag == "enemy" || other.gameObject.tag == "cow")
         {
             PlayerScoreScript.playerFood += 1;
+            other.GetComponent<AudioSource>().Play();
+            Vector3 pos = other.transform.position;
+            Destroy(other.gameObject);
 
             if (other.gameObject.tag == "cow")
             {
-                Destroy(other.gameObject);
-                Instantiate(cow2, other.transform.position, Quaternion.identity);
+                Instantiate(cow2,pos , Quaternion.identity);
             }
-            other.GetComponent<AudioSource>().Play();
-            Destroy(other.gameObject);
-			Debug.Log("Object Destroyed!");
+
+                Debug.Log("Object Destroyed!");
         }
     }
 }
