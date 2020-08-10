@@ -21,7 +21,7 @@ public class PlayerScoreScript : MonoBehaviour
             Instantiate(bullet, transform.position + Vector3.up*(0.5f) +Vector3.forward , transform.rotation);
         }
 
-        if ((playerFood == 3) && (playerScore == 3)) {
+        if ((playerFood >= 3) && (playerScore >= 3)) {
             SceneManager.LoadScene(2);
         }
 
