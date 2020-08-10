@@ -2465,8 +2465,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 568497972}
-  m_LocalRotation: {x: -0.60277617, y: 0.06491171, z: 0.049294174, w: 0.79373646}
-  m_LocalPosition: {x: 196.72704, y: -72.134285, z: 812.4105}
+  m_LocalRotation: {x: -0.060505744, y: 0.10759027, z: 0.0065601724, w: 0.9923308}
+  m_LocalPosition: {x: 589.2556, y: -7.9714184, z: 671.2358}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2846,13 +2846,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 500, z: 0}
+  m_LocalRotation: {x: 0.60598844, y: 0, z: 0, w: 0.7954735}
+  m_LocalPosition: {x: 532.7, y: 484.6, z: 558.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 74.6, y: 0, z: 0}
 --- !u!114 &705507996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10390,7 +10390,7 @@ MonoBehaviour:
   lookSmoother: 3
   useCurves: 1
   useCurvesHeight: 0.5
-  forwardSpeed: 5
+  forwardSpeed: 10
   backwardSpeed: 2
   rotateSpeed: 2
   jumpPower: 2
