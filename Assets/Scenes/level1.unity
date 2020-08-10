@@ -2465,8 +2465,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 568497972}
-  m_LocalRotation: {x: -0.060505744, y: 0.10759027, z: 0.0065601724, w: 0.9923308}
-  m_LocalPosition: {x: 589.2556, y: -7.9714184, z: 671.2358}
+  m_LocalRotation: {x: 0.09800412, y: 0.24893498, z: 0.025328526, w: -0.963216}
+  m_LocalPosition: {x: 604.8266, y: -9.053593, z: 629.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7257,7 +7257,7 @@ PrefabInstance:
     - target: {fileID: 5551014577142218206, guid: 48ac4a56281975e408bfb081533b675b,
         type: 3}
       propertyPath: m_LODs.Array.data[0].screenRelativeHeight
-      value: 0.5136503
+      value: 0.5201302
       objectReference: {fileID: 0}
     - target: {fileID: 5551014577142218206, guid: 48ac4a56281975e408bfb081533b675b,
         type: 3}
